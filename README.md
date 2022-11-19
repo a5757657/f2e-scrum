@@ -46,3 +46,14 @@ div {
 }
 
 ```
+
+### 🐛 使用蟲蟲
+```javascript
+<Bug 
+  position={'leftBottom'}  /* 蟲蟲位置 leftTop || leftBottom || rightTop || rightBottom */
+  color={'#aaa'}           /* 蟲蟲顏色 */
+  smile={true}             /* 蟲蟲微笑 */
+  eyeColor={''#fff}        /* 蟲蟲眼睛顏色 */
+  look={true}              /* 蟲蟲是否在看內文 */
+/>
+```
