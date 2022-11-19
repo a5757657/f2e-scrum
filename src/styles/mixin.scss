@@ -1,0 +1,177 @@
+ // RWD斷點
+@mixin extraLarge {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+@mixin large {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin medium-large {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+@mixin small {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin extraSmall {
+  @media (max-width: 494px) {
+    @content;
+  }
+}
+
+// 顏色
+$Grayscale-900: rgb(13, 13, 13);
+$Grayscale-800: #333333;
+$Grayscale-700: #555555;
+$Grayscale-600: #888888;
+$Grayscale-500: #999999;
+$Grayscale-400: #aaaaaa;
+$Grayscale-300: #cccccc;
+$Grayscale-200: #dddddd;
+$Grayscale-100: #f0f0f0;
+$Grayscale-50: #f8f8f8;
+$Grayscale-0: #ffffff;
+
+$Red-500: #671010;
+$Red-400: #b01c1c;
+$Red-300: #e14040;
+$Red-200: #ec8a8a;
+$Red-100: #f8d3d3;
+
+$Yellow-500: #5a4308;
+$Yellow-400: #a87d0f;
+$Yellow-300: #ebb221;
+$Yellow-200: #f2cd6f;
+$Yellow-100: #f9e8bd;
+
+$Blue-500: #103550;
+$Blue-400: #1f6496;
+$Blue-300: hsl(205, 66%, 52%);
+$Blue-200: rgb(123, 184, 228);
+$Blue-100: #c2def2;
+
+$Lightblue-500: #1a383e;
+$Lightblue-400: #336e7a;
+$Lightblue-300: #4da3b5;
+$Lightblue-200: #89c2ce;
+$Lightblue-100: #c5e1e7;
+
+// 字體樣式
+@mixin Title($color: $Grayscale-900, $style: normal, $weight: 900, $size: 100px, $height: 160px) {
+  color: $color;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin Head($color: $Grayscale-900, $style: normal, $weight: 900, $size: 80px, $height: 90px) {
+  color: $color;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin Subheading($color: $Grayscale-900, $style: normal, $weight: 900, $size: 40px, $height: 60px) {
+  color: $color;   
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin Button-Semi($color: $Grayscale-900, $style: normal, $weight: 900, $size: 24px, $height: 36px) {
+  color: $color;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin Button($color: $Grayscale-0, $style: normal, $weight: 900, $size: 24px, $height: 36px) {
+  color: $color;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin Body-Semi($color: $Grayscale-900, $style: normal, $weight: 900, $size: 16px, $height: 28px) {
+  color: $color;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin Body($color: $Grayscale-900, $style: normal, $weight: 400, $size: 16px, $height: 28px) {
+  color: $color;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin Caption-Semi($color: $Grayscale-900, $style: normal, $weight: 900, $size: 12px, $height: 18px) {
+  color: $color;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin Caption($color: $Grayscale-900, $style: normal, $weight: 400, $size: 12px, $height: 18px) {
+  color: $color;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+.Title {
+  @include Title;
+}
+
+.Head {
+  @include Head;
+}
+
+.Subheading {
+  @include Subheading;
+}
+
+.Button-Semi {
+  @include Button-Semi;
+}
+
+.Button {
+  @include Button;
+}
+
+.Body-Semi {
+  @include Body-Semi;
+}
+
+.Body {
+  @include Body;
+}
+
+.Caption-Semi {
+  @include Caption-Semi;
+}
+
+.Caption {
+  @include Caption;
+}

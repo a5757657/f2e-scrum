@@ -1,0 +1,53 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif !important;
+}
+
+// 顏色
+$Grayscale-900: #0d0d0d;
+$Grayscale-800: #333333;
+$Grayscale-700: #555555;
+$Grayscale-600: #888888;
+$Grayscale-500: #999999;
+$Grayscale-400: #aaaaaa;
+$Grayscale-300: #cccccc;
+$Grayscale-200: #dddddd;
+$Grayscale-100: #f0f0f0;
+$Grayscale-50: #f8f8f8;
+$Grayscale-0: #ffffff;
+
+$Red-500: #671010;
+$Red-400: #b01c1c;
+$Red-300: #e14040;
+$Red-200: #ec8a8a;
+$Red-100: #f8d3d3;
+
+$Yellow-500: #5a4308;
+$Yellow-400: #a87d0f;
+$Yellow-300: #ebb221;
+$Yellow-200: #f2cd6f;
+$Yellow-100: #f9e8bd;
+
+$Blue-500: #103550;
+$Blue-400: #1f6496;
+$Blue-300: #3492d6;
+$Blue-200: #7bb8e4;
+$Blue-100: #c2def2;
+
+$Lightblue-500: #1a383e;
+$Lightblue-400: #336e7a;
+$Lightblue-300: #4da3b5;
+$Lightblue-200: #89c2ce;
+$Lightblue-100: #c5e1e7;
+
+// 按鈕變數
+$btn-Hug: 44px;
+$btn-border-radius: 0%;
+$btn-font-size: 16px;
+$btn-font-height: 28px;
+$btn-font-weight: 900;

@@ -1,0 +1,13 @@
+@import "./../../styles/mixin.scss";
+
+button.whiteBlockButton {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 24px;
+  border-radius: 10px;
+  box-shadow: 10px 10px $Grayscale-900;
+  @include Button;
+}

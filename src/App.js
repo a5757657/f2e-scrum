@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Layout from './components/Layout/Layout'
+import Sample from './views/Sample/Sample'
+import StageA from './views/StageA/StageA'
+import StageB from './views/StageB/StageB'
+import StageC from './views/StageC/StageC'
+import StageD from './views/StageD/StageD'
+import StageE from './views/StageE/StageE'
+import { Provider } from './context/stageContext'
+import './styles/global.scss'
+
 
 function App() {
+  const [layoutColor, setLayoutColor] = useState('A1')
+  const [userName, setUserName] = useState('林怡珊')
+  const [stage, setStage] = useState('sample')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider value={{
+        layoutColor,
+        setLayoutColor,
+        userName,
+        setUserName,
+        stage,
+        setStage
+      }}>
+        <Layout>
+          {stage === 'sample' && <Sample />}
+          {stage === 'A' && <StageA />}
+          {stage === 'B' && <StageB />}
+          {stage === 'C' && <StageC />}
+          {stage === 'D' && <StageD />}
+          {stage === 'E' && <StageE />}
+        </Layout>
+      </Provider>
+
     </div>
   );
 }
