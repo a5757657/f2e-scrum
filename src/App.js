@@ -31,7 +31,6 @@ const generateStageSection = (stageSection) => {
 };
 
 function App() {
-  const [layoutColor, setLayoutColor] = useState('A1')
   const [userName, setUserName] = useState('林怡珊')
   const [stage, setStage] = useState('sample')
   const stageSection = stage.charAt(0)
