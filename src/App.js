@@ -10,31 +10,44 @@ import StageF from './views/StageF/StageF'
 import { Provider } from './context/stageContext'
 import './styles/global.scss'
 
+const generateStageSection = (stageSection) => {
+  switch (stageSection) {
+    case "A":
+      return <StageA />
+    case "B":
+      return <StageB />
+    case "C":
+      return <StageC />
+    case "D":
+      return <StageD />
+    case "E":
+      return <StageE />
+    case "F":
+      return <StageF />
+    // default 之後要改成 return <StageA />;
+    default:
+      return <Sample />
+  }
+};
 
 function App() {
   const [layoutColor, setLayoutColor] = useState('A1')
   const [userName, setUserName] = useState('林怡珊')
   const [stage, setStage] = useState('sample')
+  const stageSection = stage.charAt(0)
+
   return (
     <div className="App">
-      <Provider value={{
-        layoutColor,
-        setLayoutColor,
-        userName,
-        setUserName,
-        stage,
-        setStage
-      }}>
-        <Layout>
-          {stage === 'sample' && <Sample />}
-          {stage === 'A' && <StageA />}
-          {stage === 'B' && <StageB />}
-          {stage === 'C' && <StageC />}
-          {stage === 'D' && <StageD />}
-          {stage === 'E' && <StageE />}
-        </Layout>
+      <Provider
+        value={{
+          userName,
+          setUserName,
+          stage,
+          setStage,
+        }}
+      >
+        <Layout>{generateStageSection(stageSection)}</Layout>
       </Provider>
-
     </div>
   );
 }
