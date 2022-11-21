@@ -6,6 +6,7 @@ import StageB from './views/StageB/StageB'
 import StageC from './views/StageC/StageC'
 import StageD from './views/StageD/StageD'
 import StageE from './views/StageE/StageE'
+import StageF from './views/StageF/StageF'
 import { Provider } from './context/stageContext'
 import './styles/global.scss'
 
@@ -31,6 +32,7 @@ function App() {
           {stage === 'C' && <StageC />}
           {stage === 'D' && <StageD />}
           {stage === 'E' && <StageE />}
+          {stage === 'F' && <StageF />}
         </Layout>
       </Provider>
 
