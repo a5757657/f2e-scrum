@@ -34,19 +34,19 @@ const Bug = ({
         <svg className='leftEye' width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="31.842" cy="31.1579" r="30.1579" fill="white" stroke="#0D0D0D" strokeWidth="2" />
           {smile ?
-            <path d="M11 35.5001C14.5 13.5001 47.5 7.50012 52.5 35.5001" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11 35.5001C14.5 13.5001 47.5 7.50012 52.5 35.5001" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             : <circle style={{ transform: `translate(${look ? eyePositionX() : '11px'}, ${look ? eyePositionY() : '11px'})` }} cx="20.587" cy="20.587" r="20.587" fill={eyeColor} />
           }
         </svg>
         <svg className='rightEye' width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="31.1579" cy="31.1579" r="30.1579" fill="white" stroke="#0D0D0D" stroke-width="2" />
+          <circle cx="31.1579" cy="31.1579" r="30.1579" fill="white" stroke="#0D0D0D" strokeWidth="2" />
           {smile ?
-            <path d="M11 35.5001C14.5 13.5001 47.5 7.50012 52.5 35.5001" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11 35.5001C14.5 13.5001 47.5 7.50012 52.5 35.5001" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             : <circle style={{ transform: `translate(${look ? eyePositionX() : '11px'}, ${look ? eyePositionY() : '11px'})` }} cx="20.587" cy="20.587" r="20.587" fill={eyeColor} />
           }
         </svg>
         <svg className='mouth' width="29" height="12" viewBox="0 0 29 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2.23644 1C-0.763456 9.5 25.7366 17.5 27.7364 1" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M2.23644 1C-0.763456 9.5 25.7366 17.5 27.7364 1" stroke="#0D0D0D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
     </div>
