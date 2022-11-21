@@ -32,6 +32,7 @@ function App() {
           {stage === 'C' && <StageC />}
           {stage === 'D' && <StageD />}
           {stage === 'E' && <StageE />}
+          {stage === 'F' && <StageF />}
         </Layout>
       </Provider>
 
