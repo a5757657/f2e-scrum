@@ -14,7 +14,7 @@ import D7 from './D7'
 const stageArr = ['D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7']
 
 const StageD = () => {
-  const [nextStage, setNextStage] = useState(6)
+  const [nextStage, setNextStage] = useState(0)
   const findStage = () => {
     switch (stageArr[nextStage]) {
       case 'D1':
