@@ -1,8 +1,23 @@
 @import './../../styles/mixin.scss';
 
 .StageA {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    p {
+        @include Subheading;
+    }
+    .marginTop {
+        margin-top: 60px;
+    }
+    .marginBottom {
+        margin-bottom: 95px;
+    }
 }

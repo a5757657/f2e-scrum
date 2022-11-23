@@ -1,52 +1,52 @@
 .bugContainer {
-  .Bug {
-    position: absolute;
-    z-index: 9;
-  }
-  .leftBottom {
-    left: -141px;
-    bottom: -30px;
-  }
-  .leftTop {
-    rotate: 82deg;
-    top: -120px;
-    left: -111px;
-  }
-  .rightTop {
-    rotate: 90deg;
-    transform: rotateX(180deg);
-    right: -88px;
-    top: -144px;
-  }
-  .rightBottom {
-    right: -70px;
-    bottom: -50px;
-    transform: rotateY(180deg);
-  }
-  .smile {
-    position: absolute;
-    z-index: 10;
-    .rightEye {
-      transform: translateX(24px);
+    .Bug {
+        position: absolute;
+        z-index: 9;
     }
-    .mouth {
-      transform: translateX(-66px) translateY(10px);
+    .leftBottom {
+        left: -141px;
+        bottom: -30px;
     }
-  }
-  .leftBottomSmile {
-    bottom: 320px;
-    left: 169px;
-  }
-  .leftTopSmile {
-    top: 169px;
-    left: 191px;
-  }
-  .rightTopSmile {
-    top: 169px;
-    right: 189px;
-  }
-  .rightBottomSmile {
-    bottom: 305px;
-    right: 211px;
-  }
+    .leftTop {
+        rotate: 82deg;
+        top: -120px;
+        left: -111px;
+    }
+    .rightTop {
+        rotate: 90deg;
+        transform: rotateX(180deg);
+        right: -88px;
+        top: -144px;
+    }
+    .rightBottom {
+        right: -70px;
+        bottom: -50px;
+        transform: rotateY(180deg);
+    }
+    .smile {
+        position: absolute;
+        z-index: 10;
+        .rightEye {
+            transform: translateX(24px);
+        }
+        .mouth {
+            transform: translateX(-66px) translateY(10px);
+        }
+    }
+    .leftBottomSmile {
+        bottom: 320px;
+        left: 169px;
+    }
+    .leftTopSmile {
+        top: 169px;
+        left: 191px;
+    }
+    .rightTopSmile {
+        top: 169px;
+        right: 189px;
+    }
+    .rightBottomSmile {
+        bottom: 305px;
+        right: 211px;
+    }
 }
