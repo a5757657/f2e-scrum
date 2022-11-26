@@ -2,7 +2,7 @@
   "name": "f2e-scrum",
   "version": "0.1.0",
   "private": true,
-  "honepage": "/f2e-scrum/",
+  "homepage": "/f2e-scrum/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
