@@ -17,6 +17,8 @@
 ### 🎁 套件
 -  [node-sass](https://github.com/sass/node-sass "node-sass")
 -  [styled-components](https://styled-components.com "styled-components")
+-  [nanoid](https://github.com/ai/nanoid "nanoid")
+-  [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd "react-beautiful-dnd")
 
 ### 架構
     🌃 asset：個頁面靜態資料存放區 如：圖片
