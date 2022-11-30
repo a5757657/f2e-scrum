@@ -15,7 +15,7 @@ import C5 from './C5'
 import C6 from './C6'
 import C7 from './C7'
 
-const stagePage = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6','C7']
+const stagePage = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7']
 
 const StageC = () => {
     const { userName, setLayoutColor } = useContext(stageContext)
@@ -43,7 +43,7 @@ const StageC = () => {
     }
     useEffect(() => {
         setLayoutColor('C1')
-      }, [])
+    }, [])
 
     return (
         <div className="StageC">
@@ -83,16 +83,25 @@ const StageC = () => {
                     look={eyeLook}
                 />
             )}
-            {stagePage[page] === 'C7' ? (
-                <C7 />
+            {stagePage[page] === 'C6' ? (
+                <WhiteBlock
+                    button={
+                        <Button
+                            onClick={() => page < 7 && setPage(page + 1)}
+                            color="#3492d5"
+                            text='挑戰'
+                            arrow
+                        />
+                    }
+                >
+                    {nowPage()}
+                </WhiteBlock>
             ) : (
                 <WhiteBlock
                     button={
                         <Button
-                            onClick={() =>
-                                page < 7 && setPage(page + 1)
-                            }
-                            color='#3492d5'
+                            onClick={() => page < 7 && setPage(page + 1)}
+                            color="#3492d5"
                             arrow
                         />
                     }
@@ -100,6 +109,7 @@ const StageC = () => {
                     {nowPage()}
                 </WhiteBlock>
             )}
+            {stagePage[page] === 'C7' && <C7 />}
         </div>
     )
 }
