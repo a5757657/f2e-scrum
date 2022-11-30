@@ -83,25 +83,26 @@ const StageC = () => {
                     look={eyeLook}
                 />
             )}
-            {stagePage[page] === 'C6' ? (
+            {page < 5 && (
                 <WhiteBlock
                     button={
                         <Button
                             onClick={() => page < 7 && setPage(page + 1)}
                             color="#3492d5"
-                            text='挑戰'
                             arrow
                         />
                     }
                 >
                     {nowPage()}
                 </WhiteBlock>
-            ) : (
+            )}
+            {stagePage[page] === 'C6' && (
                 <WhiteBlock
                     button={
                         <Button
                             onClick={() => page < 7 && setPage(page + 1)}
                             color="#3492d5"
+                            text="挑戰"
                             arrow
                         />
                     }

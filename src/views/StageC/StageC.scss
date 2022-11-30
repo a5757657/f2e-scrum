@@ -80,17 +80,33 @@
                 box-shadow: 20px 20px #0d0d0d;
                 margin: 63px auto 0px auto;
 
-                .title{
-                    @include Subheading($color:$Blue-300)
+                .title {
+                    @include Subheading($color: $Blue-300);
                 }
-                .tag{
-                    @include Button($color:$Grayscale-800, $weight:400)
+                .tag {
+                    // width: 100%;
+                    @include Button($color: $Grayscale-800, $weight: 400);
+                }
+                ._margin {
+                    margin-bottom: 25px;
                 }
             }
 
-            // .quserion{
-
-            // }
+            .quserion {
+                .tag {
+                    margin-left: 30px;
+                }
+            }
+            .answer {
+                .block {
+                    width: 573px;
+                    height: 126px;
+                    margin-bottom: 25px;
+                    // background-color: $Lightblue-100;
+                    border-radius: 10px;
+                    border: 2px dashed $Blue-300;
+                }
+            }
         }
     }
 }
