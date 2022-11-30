@@ -1,27 +1,96 @@
 @import './../../styles/mixin.scss';
 
 .StageC {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .textContainer {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin-top: -20px;
-    p {
-      @include Subheading;
+
+    .C1,
+    .C2,
+    .C3,
+    .C4,
+    .C5,
+    .C6,
+    .C7 {
+        width: 100%;
+        height: 100%;
+        @include Subheading($size: 34px, $height: 53px);
     }
-    .marginTop {
-      margin-top: 60px;
+
+    .C1 {
+        margin-top: 13px;
+        ._wrap1 {
+            span {
+                @include Subheading(
+                    $size: 34px,
+                    $color: $Blue-300,
+                    $height: 53px
+                );
+            }
+        }
+        ._wrap2 {
+            margin-top: 36px;
+            margin-left: 163px;
+            span {
+                @include Subheading(
+                    $size: 34px,
+                    $color: $Lightblue-400,
+                    $height: 53px
+                );
+            }
+        }
     }
-  }
+    .C2 {
+        text-align: center;
+        margin-top: 103px;
+    }
+    .C3,
+    .C4,
+    .C5,
+    .C6 {
+        text-align: center;
+        margin-top: 69px;
+    }
+    .C4 > ._sp {
+        margin-top: 30px;
+    }
+    .C6 {
+        span {
+            @include Subheading($size: 34px, $color: $Blue-300, $height: 53px);
+        }
+    }
+    .C7 {
+        .main {
+            display: flex;
+            .question,
+            .answer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 633px;
+                height: 817px;
+                border: 2px solid $Grayscale-900;
+                border-radius: 30px;
+                background-color: #fff;
+                box-shadow: 20px 20px #0d0d0d;
+                margin: 63px auto 0px auto;
+
+                .title{
+                    @include Subheading($color:$Blue-300)
+                }
+                .tag{
+                    @include Button($color:$Grayscale-800, $weight:400)
+                }
+            }
+
+            // .quserion{
+
+            // }
+        }
+    }
 }
