@@ -15,3 +15,33 @@ const Items = (props) => {
     )
 }
 export default Items
+
+// import React from 'react'
+// import { Draggable } from 'react-beautiful-dnd'
+// import './Items.scss'
+
+// const Items = ({ item, index }) => {
+//     return (
+//         <Draggable draggabledId={item.id} index={index}>
+//             {(provided, snapshot) => {
+//                 return (
+//                     <div
+//                         className="item"
+//                         ref={provided.innerRef}
+//                         snapshot={snapshot}
+//                         {...provided.draggableProps}
+//                         {...provided.dragHandleProps}
+//                     >
+//                         <div className="content">
+//                             {item.content.map((e, i) => (
+//                                 <p key={e[0] + i}>{e}</p>
+//                             ))}
+//                         </div>
+//                         <div className="point">{item.point}</div>
+//                     </div>
+//                 )
+//             }}
+//         </Draggable>
+//     )
+// }
+// export default Items

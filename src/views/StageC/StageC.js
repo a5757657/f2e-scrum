@@ -102,8 +102,8 @@ const StageC = () => {
                         <Button
                             onClick={() => page < 7 && setPage(page + 1)}
                             color="#3492d5"
-                            text="挑戰"
-                            arrow
+                            text="沒問題，我來挑戰！"
+                            arrow={false}
                         />
                     }
                 >
