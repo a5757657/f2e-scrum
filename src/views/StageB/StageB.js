@@ -1,15 +1,19 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import './StageB.scss'
 import stageContext from '../../context/stageContext'
 import BSubStageLayout from './SubStage/BSubStageLayout'
 import Button from '../../components/Button/Button'
+import BFour from './SubStage/BFour'
 
 
 
 const StageB = () => {
   const { userName, setLayoutColor, setStage } = useContext(stageContext)
-  setLayoutColor('B1')
   const [subStage, setSubStage] = useState("BOne")
+  useEffect(() => {
+    setLayoutColor('B1')
+  }, [])
+
 
   const BOne = () => {
     return <BSubStageLayout handleOnClick={() => setSubStage("BTwo")} arrow={true}>
@@ -34,10 +38,6 @@ const StageB = () => {
       <p>來試試看調整產品優先度，排出 <span style={{ color: "#3492D6" }}>產品待辦清單</span> 吧！</p>
     </BSubStageLayout>
   }
-  const BFour = () => {
-    setLayoutColor('B4')
-    return
-  }
 
 
   return (
@@ -45,7 +45,7 @@ const StageB = () => {
       {subStage === "BOne" && BOne()}
       {subStage === "BTwo" && BTwo()}
       {subStage === "BThree" && BThree()}
-      {subStage === "BFour" && BFour()}
+      {subStage === "BFour" && <BFour />}
     </div>
   )
 }
