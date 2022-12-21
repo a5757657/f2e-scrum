@@ -33,9 +33,7 @@ const Items = ({ item, index }) => {
                         {...provided.dragHandleProps}
                     >
                         <div className="content">
-                            {item.content.map((e, i) => (
-                                <p key={e[0] + i}>{e}</p>
-                            ))}
+                            {item.content}
                         </div>
                         <div className="point">{item.point}</div>
                     </div>
