@@ -9,7 +9,7 @@ import BFour from './SubStage/BFour'
 
 const StageB = () => {
   const { userName, setLayoutColor, setStage } = useContext(stageContext)
-  const [subStage, setSubStage] = useState("BOne")
+  const [subStage, setSubStage] = useState("BFour")
   useEffect(() => {
     setLayoutColor('B1')
   }, [])

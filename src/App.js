@@ -14,7 +14,7 @@ import './styles/global.scss'
 function App() {
   const [layoutColor, setLayoutColor] = useState('A1')
   const [userName, setUserName] = useState('林怡珊')
-  const [stage, setStage] = useState('A')
+  const [stage, setStage] = useState('B')
   return (
     <div className="App">
       <Provider value={{

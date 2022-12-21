@@ -1,9 +1,10 @@
 import React from 'react'
 import "./OptionSpace.scss"
 
-const OptionSpace = () => {
+const OptionSpace = (props) => {
+    const { text } = props
     return (
-        <div className='OptionSpace'></div>
+        <div className='OptionSpace'>{text}</div>
     )
 }
 
