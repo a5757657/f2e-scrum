@@ -91,7 +91,6 @@ const C7 = () => {
                 {
                     id: 2,
                     content:'後台職缺管理功能（資訊上架、下架、顯示應徵者資料）',
-
                     point: '8',
                 },
                 {
@@ -205,11 +204,11 @@ const C7 = () => {
                                     {provided.placeholder}
                                 </div>
                             )}
-                            <div className="blocks"></div>
-                            <div className="blocks"></div>
-                            <div className="blocks"></div>
-                            <div className="blocks"></div>
                         </Droppable>
+                        <div className="blocks"></div>
+                        <div className="blocks"></div>
+                        <div className="blocks"></div>
+                        <div className="blocks"></div>
                         <div className="tag">
                             {ttlPoint > 20 && msg}
                         </div>
