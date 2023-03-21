@@ -1,22 +1,235 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import stageContext from './../../context/stageContext'
 import Button from '../../components/Button/Button'
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { nanoid } from "nanoid";
 
 const D7 = () => {
-  const { userName, setLayoutColor } = useContext(stageContext)
+  const { userName, setLayoutColor, setStage } = useContext(stageContext)
+  const answerArry = '1,2,3';
+  const [correct, setCorrect] = useState(false)
+  const [option, setOption] = useState([
+    {
+      content: "短衝檢視會議 Sprint Review",
+      id: nanoid(),
+      priority: "2"
+    },
+    {
+      content: "短衝自省會議 Sprint Retrospective",
+      id: nanoid(),
+      priority: "3"
+    },
+    {
+      content: "每日站立會議 Daily Scrum",
+      id: nanoid(),
+      priority: "1"
+    }
+  ])
+  const [answer, setAnswer] = useState([
+    {
+      content: "",
+      id: nanoid(),
+      priority: ""
+    },
+    {
+      content: "",
+      id: nanoid(),
+      priority: ""
+    },
+    {
+      content: "",
+      id: nanoid(),
+      priority: ""
+    },
+  ])
   useEffect(() => {
     setLayoutColor('D7')
   }, [])
 
+  const handleDragOption = event => {
+    const destinationId = event.destination.droppableId
+    const destinationIdx = event.destination.droppableId === 'answerWrap2' ? 1 : event.destination.index
+    const sourceId = event.source.droppableId
+    const sourceIdx = event.source.droppableId === 'answerWrap2' ? 1 : event.source.index
+    if (sourceId === 'option' && destinationId.includes('answerWrap')) {
+      const newAnswer = JSON.parse(JSON.stringify(answer))
+      const newOption = JSON.parse(JSON.stringify(option))
+      newAnswer[destinationIdx] = option[sourceIdx]
+      newOption.splice(sourceIdx, 1, {
+        content: "",
+        id: nanoid(),
+        priority: ""
+      })
+      setAnswer(newAnswer)
+      setOption(newOption)
+    }
+  }
+
+  const handleCheckAnswer = () => {
+    if (answer.every(d => d.content !== '')) {
+      const answerArr = answer.map(d => d.priority).join()
+      if (answerArr === answerArry) {
+        setLayoutColor('E1')
+        setStage('E')
+      } else {
+        setCorrect(true)
+        setAnswer(
+          [
+            {
+              content: "",
+              id: nanoid(),
+              priority: ""
+            },
+            {
+              content: "",
+              id: nanoid(),
+              priority: ""
+            },
+            {
+              content: "",
+              id: nanoid(),
+              priority: ""
+            },
+          ]
+        )
+        setOption([
+          {
+            content: "短衝檢視會議 Sprint Review",
+            id: nanoid(),
+            priority: "2"
+          },
+          {
+            content: "短衝自省會議 Sprint Retrospective",
+            id: nanoid(),
+            priority: "3"
+          },
+          {
+            content: "每日站立會議 Daily Scrum",
+            id: nanoid(),
+            priority: "1"
+          }
+        ])
+      }
+    }
+  }
   return (
     <div className='D7'>
       <div className="info">
         <p>那{userName}來試試看，在這經典的 Scrum 流程圖中，</p>
         <p>這些流程分別代表哪一個會議呢？請把對應的流程貼到正確位置。</p>
       </div>
+      <DragDropContext onDragEnd={handleDragOption}>
+        <div className="DragDropWrap">
+          <Droppable droppableId="option">
+            {(provided, snapshot) => (
+              <div
+                className='optionWrap'
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+              >
+                {option.map((item, index) => (
+                  <Draggable key={item.id} draggableId={item.id} index={index}>
+                    {(provided, snapshot) => {
+                      return (
+                        <div
+                          className={item.content === '' ? 'empty' : ''}
+                          ref={provided.innerRef}
+                          snapshot={snapshot}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                        >
+                          {item.content}
+                        </div>
+                      );
+                    }}
+                  </Draggable>
+                ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+          <Droppable droppableId="answerWrap1">
+            {(provided, snapshot) => (
+              <div
+                className='answerWrap wrap1'
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+              >
+                <Draggable index={0}>
+                  {(provided, snapshot) => {
+                    return (
+                      <div
+                        className={answer[0].content === '' ? 'empty' : ''}
+                        ref={provided.innerRef}
+                        snapshot={snapshot}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                      >{answer[0].content}</div>
+                    );
+                  }}
+                </Draggable>
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+          <Droppable droppableId="answerWrap2">
+            {(provided, snapshot) => (
+              <div
+                className='answerWrap wrap2'
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+              >
+                <Draggable index={1}>
+                  {(provided, snapshot) => {
+                    return (
+                      <div
+                        className={answer[1].content === '' ? 'empty' : ''}
+                        ref={provided.innerRef}
+                        snapshot={snapshot}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                      >{answer[1].content}</div>
+                    );
+                  }}
+                </Draggable>
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+          <Droppable droppableId="answerWrap3">
+            {(provided, snapshot) => (
+              <div
+                className='answerWrap wrap3'
+                ref={provided.innerRef}
+                {...provided.droppableProps}
+              >
+                <Draggable index={2}>
+                  {(provided, snapshot) => {
+                    return (
+                      <div
+                        className={answer[2].content === '' ? 'empty' : ''}
+                        ref={provided.innerRef}
+                        snapshot={snapshot}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                      >{answer[2].content}</div>
+                    );
+                  }}
+                </Draggable>
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+          <div className="whiteBoxWrap">
+            <div className="position"></div>
+            <div className="position"></div>
+            <div className="position"></div>
+          </div>
+        </div>
+      </DragDropContext>
       <div className="bgArrow">
-        <div className="circle"></div>
-        <div className="circle"></div>
+        <div className="circle1"></div>
+        <div className="circle2"></div>
         <div className="sprint">Sprint</div>
         <svg className='arrowLine' xmlns="http://www.w3.org/2000/svg" width="1387" height="58" fill="none" viewBox="0 0 1387 58">
           <path fill="#B01C1C" d="M5 24a5 5 0 0 0 0 10V24Zm1382 5L1337 .132v57.735L1387 29ZM5 34h1337V24H5v10Z" />
@@ -26,8 +239,8 @@ const D7 = () => {
         </svg>
       </div>
       <div className="buttonWrap">
-        <span className='reTry'>再試試看！</span>
-        <Button color='#fff' text='完成了' />
+        {correct && <span className='reTry'>再試試看！</span>}
+        <Button onClick={() => handleCheckAnswer()} color='#fff' text='完成了' />
       </div>
     </div>
   )
