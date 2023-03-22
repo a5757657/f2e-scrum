@@ -1,5 +1,6 @@
 # ⭐ The F2E Scrum 新手村 ⭐
 
+🔗[線上觀看連結](https://a5757657.github.io/f2e-scrum/ "線上觀看連結")
 
 ### 啟動專案
 1. 🧑‍🤝‍🧑 克隆專案
@@ -17,6 +18,8 @@
 ### 🎁 套件
 -  [node-sass](https://github.com/sass/node-sass "node-sass")
 -  [styled-components](https://styled-components.com "styled-components")
+-  [nanoid](https://github.com/ai/nanoid "nanoid")
+-  [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd "react-beautiful-dnd")
 
 ### 架構
     🌃 asset：個頁面靜態資料存放區 如：圖片

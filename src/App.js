@@ -12,7 +12,7 @@ import './styles/global.scss'
 
 
 function App() {
-  const [layoutColor, setLayoutColor] = useState('A1')
+  const [layoutColor, setLayoutColor] = useState('D1')
   const [userName, setUserName] = useState('林怡珊')
   const [stage, setStage] = useState('C')
   return (
@@ -35,7 +35,6 @@ function App() {
           {stage === 'F' && <StageF />}
         </Layout>
       </Provider>
-
     </div>
   );
 }
