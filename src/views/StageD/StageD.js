@@ -3,12 +3,7 @@ import './StageD.scss'
 import Bug from '../../components/Bug/Bug'
 import WhiteBlock from '../../components/WhiteBlock/WhiteBlock'
 import Button from '../../components/Button/Button'
-import D1 from './D1'
-import D2 from './D2'
-import D3 from './D3'
-import D4 from './D4'
-import D5 from './D5'
-import D6 from './D6'
+import { D1, D2, D3, D4, D5, D6} from './SubStageD'
 import D7 from './D7'
 
 const stageArr = ['D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7']

@@ -2,9 +2,9 @@ import React from 'react'
 import './Input.scss'
 
 const Input = (props) => {
-    const { placeholder, onChange } = props
+    const { placeholder, onChange, value } = props
     return (
-        <input type="text" placeholder={placeholder} onChange={onChange} />
+        <input value={value} type="text" placeholder={placeholder} onChange={onChange} />
     )
 }
 

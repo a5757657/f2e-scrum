@@ -2,17 +2,16 @@ import React, { useContext, useState, useEffect } from 'react'
 import './StageB.scss'
 import stageContext from '../../context/stageContext'
 import BSubStageLayout from './SubStage/BSubStageLayout'
-import Button from '../../components/Button/Button'
 import BFour from './SubStage/BFour'
 
 
 
 const StageB = () => {
-  const { userName, setLayoutColor, setStage } = useContext(stageContext)
-  const [subStage, setSubStage] = useState("BFour")
+  const { userName, setLayoutColor } = useContext(stageContext)
+  const [subStage, setSubStage] = useState("BOne")
   useEffect(() => {
     setLayoutColor('B1')
-  }, [])
+  })
 
 
   const BOne = () => {

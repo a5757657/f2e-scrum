@@ -1,81 +1,156 @@
 @import './../../../styles/mixin.scss';
 
 .BFour {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    .questionContainer {
-        background: #ffffff;
-        border: 2px solid #0d0d0d;
-        border-radius: 30px;
-        box-shadow: 20px 20px $Grayscale-900;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	.questionContainer {
+			background: #ffffff;
+			border: 2px solid #0d0d0d;
+			border-radius: 30px;
+			box-shadow: 20px 20px $Grayscale-900;
+			padding: 50px 100px;
+			width: calc(min(80%, 1030px));
+			p {
+					font-weight: 900;
+					font-size: 24px;
+					line-height: 36px;
+					color: #0d0d0d;
+			}
+	}
+	.answerContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 32px;
+		padding: 18px 0;
+		width: calc(min(44%, 633px));
+		height: calc(min(67vh, 670px));
+		background-color: $Grayscale-0;
+		border-radius: 30px;
+		box-shadow: 20px 20px $Grayscale-900;
+		.title {
+			p {
+					font-weight: 900;
+					font-size: 40px;
+					line-height: 60px;
+					color: $Blue-300;
+			}
+		}
 
-        padding: 50px 100px;
-        width: calc(min(80%, 1030px));
-
-        p {
-            font-weight: 900;
-            font-size: 24px;
-            line-height: 36px;
-            color: #0d0d0d;
-        }
-    }
-    .answerContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 32px;
-
-        padding: 18px 0;
-
-        width: calc(min(44%, 633px));
-        height: calc(min(67vh, 670px));
-
-        background-color: $Grayscale-0;
-        border-radius: 30px;
-        box-shadow: 20px 20px $Grayscale-900;
-
-        .title {
-            p {
-                font-weight: 900;
-                font-size: 40px;
-                line-height: 60px;
-                color: $Blue-300;
-            }
-        }
-
-        .optionContainer {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            padding: 0 20px;
-            gap: 15px;
-            p {
-                color: $Grayscale-800;
-            }
-        }
-        .optionBlock {
-            width: 100%;
-            height: 92px;
-            border-radius: 10px;
-            background-color: #c5e1e7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            p {
-                font-size: 24px;
-                line-height: 36px;
-                font-weight: 900;
-                text-align: center;
-
-                color: #103550;
-            }
-        }
-        .Dragging {
-            background-color: #7bb8e4;
-        }
-    }
+		.optionContainer {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 470px;
+			padding: 0 20px;
+			position: relative;
+			p {
+				color: $Grayscale-800;
+			}
+			.borderContainer {
+				position: absolute;
+				width: calc(100% - 80px);
+				height: 100%;
+				top: 31px;
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				flex-direction: column;
+				gap: 15px;
+				z-index: 0;
+				pointer-events: none;
+				div {
+					width: 100%;
+					height: 92px;
+					border: 4px dashed #c5e1e7;
+					border-radius: 10px;
+				}
+			}
+			.optionContainer1 {
+				div:nth-child(5) {
+					height: 0px !important;
+					background-color: red;
+				}
+			}
+		}
+		.optionBlock {
+			width: 100%;
+			height: 92px;
+			border-radius: 10px;
+			background-color: #c5e1e7;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p {
+				font-size: 24px;
+				line-height: 36px;
+				font-weight: 900;
+				text-align: center;
+				color: #103550;
+			}
+		}
+		.empty {
+			width: 100%;
+			height: 92px;
+			border-radius: 10px;
+		}
+		.Dragging {
+			background-color: #7bb8e4;
+		}
+	}
+	.option {
+		position: absolute;
+		.optionBlock {
+			width: 300px;
+			height: 92px;
+			border-radius: 10px;
+			background-color: #c5e1e7;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p {
+				font-size: 24px;
+				line-height: 36px;
+				font-weight: 900;
+				text-align: center;
+				color: #103550;
+			}
+		}
+	}
+	#option1 {
+		top: 30%;
+		right: 100px;
+	}
+	#option2 {
+		top: 60%;
+		right: 100px;
+	}
+	#option3 {
+		top: 40%;
+		left: 100px;
+	}
+	#option4 {
+		top: 70%;
+		left: 100px;
+	}
+	.buttonWrap {
+		display: flex;
+		margin: 0 auto;
+		align-items: center;
+		gap: 32px;
+		position: absolute;
+		bottom: 50px;
+		right: 50px;
+		z-index: 17;
+		.reTry {
+				@include Button($color: $Red-300, $weight: 400);
+		}
+		button {
+				color: $Red-300;
+		}
+}
 }
