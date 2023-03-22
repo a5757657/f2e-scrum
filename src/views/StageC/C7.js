@@ -6,7 +6,7 @@ import Button from '../../components/Button/Button'
 import './Items.scss'
 
 const C7 = () => {
-  const { setLayoutColor } = useContext(stageContext)
+  const { setLayoutColor, setStage } = useContext(stageContext)
   const [message, setMessage] = useState('請完成短衝清單')
   const [options, setOptions] = useState([
     {
@@ -102,7 +102,8 @@ const C7 = () => {
 
   const handleCheckAnswer = () => {
     if (message === '') {
-      
+      setLayoutColor('D1')
+      setStage('D')
     }
   }
 
