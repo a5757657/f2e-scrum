@@ -5,4 +5,11 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .F1 {
+    @include Subheading($size: 34px);
+    text-align: center;
+  }
 }

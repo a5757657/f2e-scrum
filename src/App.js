@@ -13,8 +13,8 @@ import './styles/global.scss'
 
 function App() {
   const [layoutColor, setLayoutColor] = useState('A1')
-  const [userName, setUserName] = useState('林怡珊')
-  const [stage, setStage] = useState('A')
+  const [userName, setUserName] = useState('')
+  const [stage, setStage] = useState('F')
   return (
     <div className="App">
       <Provider value={{
@@ -26,13 +26,15 @@ function App() {
         setStage
       }}>
         <Layout>
-          {stage === 'sample' && <Sample />}
-          {stage === 'A' && <StageA />}
-          {stage === 'B' && <StageB />}
-          {stage === 'C' && <StageC />}
-          {stage === 'D' && <StageD />}
-          {stage === 'E' && <StageE />}
-          {stage === 'F' && <StageF />}
+          <div style={{ width: '100%', height: '100%', zIndex: 1 }}>
+            {stage === 'sample' && <Sample />}
+            {stage === 'A' && <StageA />}
+            {stage === 'B' && <StageB />}
+            {stage === 'C' && <StageC />}
+            {stage === 'D' && <StageD />}
+            {stage === 'E' && <StageE />}
+            {stage === 'F' && <StageF />}
+          </div>
         </Layout>
       </Provider>
     </div>
