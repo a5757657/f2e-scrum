@@ -61,7 +61,7 @@ const BFour = () => {
       }
     ]
   );
-  const onDragEnd = (event) => {
+  const onDragEnd = event => {
     const { source, destination } = event;
     if (destination) {
       const newOptions = JSON.parse(JSON.stringify(options))
@@ -95,6 +95,7 @@ const BFour = () => {
     const newItems = JSON.parse(JSON.stringify(items)).map(d => d.priority).join('')
     if (newItems === '1234') {
       setStage('C')
+      setLayoutColor('C1')
     } else {
       setCorrect(true)
       setItems([
@@ -189,7 +190,7 @@ const BFour = () => {
               <div></div>
             </div>
           </div>
-        </div >
+        </div>
         {options[0].content && (
           <Droppable droppableId="single-1">
             {(provided, snapshot) => (
@@ -282,7 +283,7 @@ const BFour = () => {
           )}
           </Droppable>
         )}
-      </DragDropContext >
+      </DragDropContext>
       <div className="buttonWrap">
         {correct && <span className='reTry'>再試試看！</span>}
         <Button onClick={() => handleCheckAnswer()} color='#fff' fontColor='#E14040' text='完成了' />

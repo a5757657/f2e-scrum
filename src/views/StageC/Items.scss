@@ -1,0 +1,39 @@
+@import '../../styles/mixin.scss';
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 573px;
+    height: 126px;
+    background-color: $Lightblue-100;
+    border-radius: 10px;
+    z-index: 9;
+    .content{
+        @include Button-Semi($color: $Blue-500);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+            text-align: center;
+        }
+    }
+    .point{
+        @include Button-Semi($color: $Grayscale-0);
+        text-align: center;
+        margin-left: 20px;
+        padding: 10px 16px;
+        height: 56px;
+        border-radius: 60px;
+        background-color: $Lightblue-500;      
+    }
+}
+.emptyItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 573px;
+    height: 126px;
+    border-radius: 10px;
+}
