@@ -6,10 +6,9 @@
     align-items: center;
     width: 573px;
     height: 126px;
-    margin-bottom: 25px;
     background-color: $Lightblue-100;
     border-radius: 10px;
-
+    z-index: 9;
     .content{
         @include Button-Semi($color: $Blue-500);
         display: flex;
@@ -29,4 +28,12 @@
         border-radius: 60px;
         background-color: $Lightblue-500;      
     }
+}
+.emptyItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 573px;
+    height: 126px;
+    border-radius: 10px;
 }

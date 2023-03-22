@@ -26,7 +26,7 @@ const Items = ({ item, index }) => {
             {(provided, snapshot) => {
                 return (
                     <div
-                        className="item"
+                        className={item.content ? "item" : 'emptyItem'}
                         ref={provided.innerRef}
                         snapshot={snapshot}
                         {...provided.draggableProps}
@@ -35,7 +35,7 @@ const Items = ({ item, index }) => {
                         <div className="content">
                             {item.content}
                         </div>
-                        <div className="point">{item.point}</div>
+                        {item.point && <div className="point">{item.point}</div>}
                     </div>
                 )
             }}

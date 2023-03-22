@@ -12,9 +12,9 @@ import './styles/global.scss'
 
 
 function App() {
-  const [layoutColor, setLayoutColor] = useState('D1')
+  const [layoutColor, setLayoutColor] = useState('A1')
   const [userName, setUserName] = useState('林怡珊')
-  const [stage, setStage] = useState('C')
+  const [stage, setStage] = useState('A')
   return (
     <div className="App">
       <Provider value={{

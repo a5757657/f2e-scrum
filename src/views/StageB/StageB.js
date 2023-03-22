@@ -15,13 +15,13 @@ const StageB = () => {
 
 
   const BOne = () => {
-    return <BSubStageLayout handleOnClick={() => setSubStage("BTwo")} arrow={true}>
+    return <BSubStageLayout look handleOnClick={() => setSubStage("BTwo")} arrow={true}>
       <p>Hi！{userName}！</p>
       <p>我是 TT 資訊，開發 A 組的 PO，小敏。</p>
     </BSubStageLayout>
   }
   const BTwo = () => {
-    return <BSubStageLayout handleOnClick={() => setSubStage("BThree")} arrow={true}>
+    return <BSubStageLayout smile handleOnClick={() => setSubStage("BThree")} arrow={true}>
       <p>{userName}你知道嗎？</p>
       <p>PO 也就是 <span style={{ color: "#E14040" }}>產品負責人 Product owner</span></p>
       <p>產品負責人會負責評估產品待辦清單的價值與重要性</p>
