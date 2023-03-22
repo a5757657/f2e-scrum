@@ -14,7 +14,7 @@ import './styles/global.scss'
 function App() {
   const [layoutColor, setLayoutColor] = useState('D1')
   const [userName, setUserName] = useState('林怡珊')
-  const [stage, setStage] = useState('D')
+  const [stage, setStage] = useState('A')
   return (
     <div className="App">
       <Provider value={{
@@ -35,7 +35,6 @@ function App() {
           {stage === 'F' && <StageF />}
         </Layout>
       </Provider>
-
     </div>
   );
 }

@@ -44,7 +44,7 @@ const D7 = () => {
   ])
   useEffect(() => {
     setLayoutColor('D7')
-  }, [])
+  })
 
   const handleDragOption = event => {
     const destinationId = event.destination.droppableId
@@ -240,7 +240,7 @@ const D7 = () => {
       </div>
       <div className="buttonWrap">
         {correct && <span className='reTry'>再試試看！</span>}
-        <Button onClick={() => handleCheckAnswer()} color='#fff' text='完成了' />
+        <Button onClick={() => handleCheckAnswer()} color='#fff' fontColor='#E14040' text='完成了' />
       </div>
     </div>
   )
