@@ -20,6 +20,7 @@ const Layout = ({ children }) => {
   return (
     <div className='Layout' style={{ background: colorObject[layoutColor] }}>
       {children}
+      <div className="texture"></div>
     </div>
   )
 }

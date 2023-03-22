@@ -110,6 +110,44 @@ const D7 = () => {
           }
         ])
       }
+    } else {
+      setCorrect(true)
+        setAnswer(
+          [
+            {
+              content: "",
+              id: nanoid(),
+              priority: ""
+            },
+            {
+              content: "",
+              id: nanoid(),
+              priority: ""
+            },
+            {
+              content: "",
+              id: nanoid(),
+              priority: ""
+            },
+          ]
+        )
+        setOption([
+          {
+            content: "短衝檢視會議 Sprint Review",
+            id: nanoid(),
+            priority: "2"
+          },
+          {
+            content: "短衝自省會議 Sprint Retrospective",
+            id: nanoid(),
+            priority: "3"
+          },
+          {
+            content: "每日站立會議 Daily Scrum",
+            id: nanoid(),
+            priority: "1"
+          }
+        ])
     }
   }
   return (
