@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/f2e-scrum/static/css/main.4b1a097e.css",
-    "main.js": "/f2e-scrum/static/js/main.95061578.js",
+    "main.css": "/f2e-scrum/static/css/main.34389dd3.css",
+    "main.js": "/f2e-scrum/static/js/main.74c2d506.js",
     "static/js/787.1df2b2d5.chunk.js": "/f2e-scrum/static/js/787.1df2b2d5.chunk.js",
+    "static/media/noiseBackground.png": "/f2e-scrum/static/media/noiseBackground.871b6b27c3e8850a99a4.png",
     "index.html": "/f2e-scrum/index.html",
-    "main.4b1a097e.css.map": "/f2e-scrum/static/css/main.4b1a097e.css.map",
-    "main.95061578.js.map": "/f2e-scrum/static/js/main.95061578.js.map",
+    "main.34389dd3.css.map": "/f2e-scrum/static/css/main.34389dd3.css.map",
+    "main.74c2d506.js.map": "/f2e-scrum/static/js/main.74c2d506.js.map",
     "787.1df2b2d5.chunk.js.map": "/f2e-scrum/static/js/787.1df2b2d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b1a097e.css",
-    "static/js/main.95061578.js"
+    "static/css/main.34389dd3.css",
+    "static/js/main.74c2d506.js"
   ]
 }
