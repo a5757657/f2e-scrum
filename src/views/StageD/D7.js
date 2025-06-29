@@ -10,17 +10,17 @@ const D7 = () => {
   const [correct, setCorrect] = useState(false)
   const [option, setOption] = useState([
     {
-      content: "短衝檢視會議 Sprint Review",
+      content: "短衝檢視會議 Sprint Review2",
       id: nanoid(),
       priority: "2"
     },
     {
-      content: "短衝自省會議 Sprint Retrospective",
+      content: "短衝自省會議 Sprint Retrospective3",
       id: nanoid(),
       priority: "3"
     },
     {
-      content: "每日站立會議 Daily Scrum",
+      content: "每日站立會議 Daily Scrum1",
       id: nanoid(),
       priority: "1"
     }
@@ -94,17 +94,17 @@ const D7 = () => {
         )
         setOption([
           {
-            content: "短衝檢視會議 Sprint Review",
+            content: "短衝檢視會議 Sprint Review2",
             id: nanoid(),
             priority: "2"
           },
           {
-            content: "短衝自省會議 Sprint Retrospective",
+            content: "短衝自省會議 Sprint Retrospective3",
             id: nanoid(),
             priority: "3"
           },
           {
-            content: "每日站立會議 Daily Scrum",
+            content: "每日站立會議 Daily Scrum1",
             id: nanoid(),
             priority: "1"
           }
@@ -133,17 +133,17 @@ const D7 = () => {
         )
         setOption([
           {
-            content: "短衝檢視會議 Sprint Review",
+            content: "短衝檢視會議 Sprint Review2",
             id: nanoid(),
             priority: "2"
           },
           {
-            content: "短衝自省會議 Sprint Retrospective",
+            content: "短衝自省會議 Sprint Retrospective3",
             id: nanoid(),
             priority: "3"
           },
           {
-            content: "每日站立會議 Daily Scrum",
+            content: "每日站立會議 Daily Scrum1",
             id: nanoid(),
             priority: "1"
           }
